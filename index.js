@@ -10,8 +10,8 @@ index.use(express.static('./public'))
 console.log('Task Manager App')
 // app.use(express.urlencoded({extended: false}))
 index.use(express.json())
-
-index.use('/api/v1/tasks', tasks)
+index.use('/',require('./routes/tasks'))
+// index.use('/api/v1/tasks', tasks)
 
 const port = process.env.PORT || 3000
 const start = async()=>{
